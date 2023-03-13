@@ -37,7 +37,7 @@ StraightRoadSegment {
 ToyotaPrius {
   translation 0 -1.58 0.4
   name "vehicle(1)"
-  controller "maliput_pure_pursuit"
+  controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
     }
@@ -48,7 +48,7 @@ ToyotaPrius {
 ToyotaPrius {
   translation 6.16 -1.58 0.5
   name "vehicle(3)"
-  controller "maliput_pure_pursuit"
+  controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
     }
@@ -59,7 +59,7 @@ ToyotaPrius {
 ToyotaPrius {
   translation 6.26 0.82 0.6
   name "vehicle(5)"
-  controller "maliput_pure_pursuit"
+  controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
     }
@@ -70,7 +70,7 @@ ToyotaPrius {
 ToyotaPrius {
   translation 11.53 -1.58 0.6
   name "vehicle(4)"
-  controller "maliput_pure_pursuit"
+  controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
     }
@@ -81,7 +81,7 @@ ToyotaPrius {
 ToyotaPrius {
   translation 11.63 1.37 0.7
   name "vehicle(6)"
-  controller "maliput_pure_pursuit"
+  controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
     }
@@ -92,7 +92,7 @@ ToyotaPrius {
 ToyotaPrius {
   translation 0.1 1.33 0.5
   name "vehicle(2)"
-  controller "maliput_pure_pursuit"
+  controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
     }

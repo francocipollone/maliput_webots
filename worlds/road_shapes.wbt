@@ -1,0 +1,87 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/HelicoidalRoadSegment.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3148414415723984 0.11315913784658466 0.942374594410541 2.319547634729481
+  position 75.65302699207575 -104.0829128246358 81.3876520822029
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 100 100
+  appearance Parquetry {
+    type "light strip"
+  }
+}
+Road {
+  translation -19.94 -25.58 0.33
+  name "elevation"
+  bottom TRUE
+  wayPoints [
+    0 0 0
+    10 0 0
+    20 0 4
+    30 0 0
+    40 0 0
+  ]
+  bottomTexture [
+    ""
+  ]
+  locked FALSE
+  roadBoundingObject TRUE
+}
+Road {
+  translation -19.94 -37.59 0.33
+  name "Multiple lanes"
+  width 14
+  numberOfLanes 4
+  numberOfForwardLanes 2
+  rightBorder FALSE
+  leftBorder FALSE
+  bottom TRUE
+  wayPoints [
+    0 0 0
+    10 0 0
+    20 0 0
+    30 0 0
+    60 0 0
+  ]
+  bottomTexture [
+    ""
+  ]
+  locked FALSE
+  roadBoundingObject TRUE
+}
+Road {
+  translation -19.94 -13.56 0.04
+  name "curved"
+  rightBarrier TRUE
+  leftBarrier TRUE
+  bottom TRUE
+  wayPoints [
+    0 0 0
+    10 0 0
+    20 10 0
+    25 30 0
+    40 20 0
+  ]
+  bottomTexture [
+    ""
+  ]
+  locked FALSE
+  roadBoundingObject TRUE
+}
+HelicoidalRoadSegment {
+  translation -38.69 0 0
+  locked FALSE
+}
