@@ -1,0 +1,268 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/road/protos/CurvedRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/vehicles/protos/toyota/ToyotaPrius.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Grass.proto"
+
+WorldInfo {
+  basicTimeStep 10
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.23988415908015268 0.05567562198796492 -0.9692037016740399 2.6754387314620844
+  position 119.42429514345557 42.26864861700169 59.06295824782911
+  follow "PurePursuit(6)"
+  followType "None"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  translation -17.62 0 -0.1
+  children [
+    Shape {
+      appearance Grass {
+        colorOverride 0 0.4 0
+      }
+      geometry DEF sand_box Box {
+        size 25 75 0.1
+      }
+    }
+  ]
+  name "grass1"
+  boundingObject USE sand_box
+}
+Solid {
+  translation 63.74 0 -0.1
+  children [
+    Shape {
+      appearance Grass {
+        colorOverride 0 0.4 0
+      }
+      geometry DEF sand_box Box {
+        size 25 75 0.1
+      }
+    }
+  ]
+  name "grass2"
+  boundingObject USE sand_box
+}
+StraightRoadSegment {
+  translation 0 5 0
+  name "1352_1405_1825"
+  width 15
+  numberOfLanes 3
+  numberOfForwardLanes 3
+  length 50
+  roadBoundingObject TRUE
+}
+StraightRoadSegment {
+  translation 50 -32.5 0
+  rotation 0 0 1 3.14159
+  name "1641_1981"
+  width 10
+  numberOfForwardLanes 2
+  length 50
+  roadBoundingObject TRUE
+}
+StraightRoadSegment {
+  translation 50 30 0
+  rotation 0 0 1 3.14159
+  name "road(3)"
+  width 5
+  numberOfLanes 1
+  length 40
+  roadBoundingObject TRUE
+}
+StraightRoadSegment {
+  translation 10 30 0
+  rotation 0 0 1 3.14159
+  name "road(2)"
+  width 5
+  numberOfLanes 1
+  rightBorder FALSE
+  roadBoundingObject TRUE
+}
+StraightRoadSegment {
+  translation 20 -3 -10
+  rotation 0 0 1 1.5708
+  name "s15_0"
+  width 5
+  numberOfLanes 1
+  length 18.5
+  roadBoundingObject TRUE
+}
+ToyotaPrius {
+  translation 13.369067890539156 0.4478766545311903 0.13947568767473245
+  rotation 0.1356356184252448 -0.06370388117935778 -0.98870864997586 0.11257784175250846
+  name "PurePursuit"
+  controller "maliput_pure_pursuit_circuit"
+  sensorsSlotCenter [
+    InertialUnit {
+    }
+    GPS {
+    }
+  ]
+}
+StraightRoadSegment {
+  translation 20 -55.2 10
+  rotation 0 0 1 1.5708
+  name "road(6)"
+  width 5
+  numberOfLanes 1
+  length 20.2
+  roadBoundingObject TRUE
+}
+DirectionalLight {
+  direction 0 -1 0
+  castShadows TRUE
+}
+CurvedRoadSegment {
+  translation 50 -15 0
+  rotation 0 1 0 0
+  name "1536_1876"
+  width 10
+  numberOfForwardLanes 2
+  curvatureRadius 17.5
+  totalAngle 3.14159
+  roadBoundingObject TRUE
+}
+CurvedRoadSegment {
+  translation 0 -15 0
+  rotation 0 0 1 3.14159
+  name "1772_2082"
+  width 10
+  numberOfForwardLanes 2
+  leftBorder FALSE
+  curvatureRadius 17.5
+  totalAngle 3.14159
+  roadBoundingObject TRUE
+}
+CurvedRoadSegment {
+  translation 0 20 0
+  rotation 0 0 1 3.14159
+  name "road(4)"
+  width 10
+  numberOfForwardLanes 2
+  leftBorder FALSE
+  curvatureRadius 12.5
+  totalAngle 3.14159
+  roadBoundingObject TRUE
+}
+CurvedRoadSegment {
+  translation 50 20 0
+  name "road(1)"
+  width 5
+  numberOfLanes 1
+  totalAngle 3.14159
+  locked FALSE
+  roadBoundingObject TRUE
+}
+CurvedRoadSegment {
+  translation -0.15 -55.0461 -0.01
+  rotation 0 0 1 0.528583
+  name "road(7)"
+  width 5
+  numberOfLanes 1
+  leftBorder FALSE
+  curvatureRadius 20
+  totalAngle 0.54
+  locked FALSE
+  roadBoundingObject TRUE
+}
+Road {
+  translation -10.1508 -37.7674 0
+  name "s10_11"
+  width 5
+  numberOfLanes 1
+  wayPoints [
+    0 0 0
+    -0.8485 -0.5288 0.0107405
+    -6.9775 -6.9069 1.09462
+    -8.9434 -11.282 2.45774
+    -9.4172 -13.098 3.14656
+    -9.8492 -17.233 5
+    -9.5157 -20.8699 6.61532
+    -8.4771 -24.5129 7.87838
+    -6.7181 -27.9769 8.80006
+    -4.2808 -31.0792 9.41507
+    -1.2562 -33.6607 9.77644
+    2.23136 -35.5979 9.94818
+    6.03744 -36.805 9.99922
+    10.1508 -37.2326 10
+    10.1508 -37.2326 10
+    14.12419 -36.8339 10
+    17.93917 -35.6538 10
+    21.4436 -33.7393 10
+    24.4979 -31.1667 10
+    26.9802 -28.0386 10
+    28.7916 -24.4798 10
+    29.8598 -20.6319 10
+    30.1508 -17.2326 10
+  ]
+  roadBoundingObject TRUE
+}
+Road {
+  translation 20 -35 10
+  name "s14"
+  width 5
+  numberOfLanes 1
+  wayPoints [
+    0 0 0
+    0 3.8644 -0.91008
+    0 7.2866 -2.96651
+    0 10.3676 -5.51486
+    0 13.2647 -8.27244
+    0 16.098 -11.096
+    0 18.9713 -13.87852
+    0 21.9988 -16.49092
+    0 25.32934 -18.69661
+    0 29.99998 -20
+    0 33 -20
+  ]
+  roadBoundingObject TRUE
+}
+Road {
+  translation 20 15 -10
+  name "s16"
+  width 5
+  numberOfLanes 1
+  wayPoints [
+    0 0 0
+    -0.3925 3.9426 0.43843
+    -1.5052 7.6121 1.54641
+    -3.225 10.8903 3.04608
+    -5.4647 13.7377 4.73082
+    -8.1725 16.128 6.43923
+    -11.31894 18.0177 8.01603
+    -14.87326 19.3317 9.272833
+    -18.75202 19.961 9.9538539
+    -19.9999992 20 10
+  ]
+  roadBoundingObject TRUE
+}

@@ -10,6 +10,27 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 
 WorldInfo {
   basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
 }
 Viewpoint {
   orientation 0.011136633915177193 0.5593347142435742 0.8288670899650309 0.7010162652879077
@@ -37,61 +58,6 @@ StraightRoadSegment {
 ToyotaPrius {
   translation 0 -1.58 0.4
   name "vehicle(1)"
-  controller "maliput_pure_pursuit_loop_road"
-  sensorsSlotCenter [
-    InertialUnit {
-    }
-    GPS {
-    }
-  ]
-}
-ToyotaPrius {
-  translation 6.16 -1.58 0.5
-  name "vehicle(3)"
-  controller "maliput_pure_pursuit_loop_road"
-  sensorsSlotCenter [
-    InertialUnit {
-    }
-    GPS {
-    }
-  ]
-}
-ToyotaPrius {
-  translation 6.26 0.82 0.6
-  name "vehicle(5)"
-  controller "maliput_pure_pursuit_loop_road"
-  sensorsSlotCenter [
-    InertialUnit {
-    }
-    GPS {
-    }
-  ]
-}
-ToyotaPrius {
-  translation 11.53 -1.58 0.6
-  name "vehicle(4)"
-  controller "maliput_pure_pursuit_loop_road"
-  sensorsSlotCenter [
-    InertialUnit {
-    }
-    GPS {
-    }
-  ]
-}
-ToyotaPrius {
-  translation 11.63 1.37 0.7
-  name "vehicle(6)"
-  controller "maliput_pure_pursuit_loop_road"
-  sensorsSlotCenter [
-    InertialUnit {
-    }
-    GPS {
-    }
-  ]
-}
-ToyotaPrius {
-  translation 0.1 1.33 0.5
-  name "vehicle(2)"
   controller "maliput_pure_pursuit_loop_road"
   sensorsSlotCenter [
     InertialUnit {
