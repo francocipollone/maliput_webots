@@ -1,5 +1,6 @@
 # Maliput-Webots Worlds
 
+<img src="docs/circuit_multi_agents.png" width=500>
 
 ## Description
 
