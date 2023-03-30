@@ -16,17 +16,13 @@ from maliput.api import (
 import math
 import os
 
-def norm(vector3):
-  return math.sqrt(vector3.x() * vector3.x() + vector3.y() * vector3.y() + vector3.z() * vector3.z())
-
 def ComputeCurvature(s_lookahead, rg, inertial_position, heading):
   goal_position = ComputeGoalPoint(s_lookahead, rg, inertial_position)
   inertial_position = inertial_position.xyz()
   x = inertial_position.x()
   y = inertial_position.y()
   delta_r = -(goal_position.x() - x) * math.sin(heading) + (goal_position.y() - y) * math.cos(heading)
-  difference_vector = maliput.math.Vector3(goal_position.x() - inertial_position.x(), goal_position.y() - inertial_position.y(), goal_position.z() - inertial_position.z())
-  curvature = 2. * delta_r / math.pow(norm(difference_vector), 2.)
+  curvature = 2. * delta_r / math.pow((goal_position-inertial_position).norm(), 2.)
   return curvature
 
 def ComputeGoalPoint(s_lookahead, rg, inertial_position):
